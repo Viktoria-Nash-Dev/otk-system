@@ -1,0 +1,15 @@
+{
+  "name": "ОТК Контроль",
+  "short_name": "ОТК",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#2e1d5e",
+  "theme_color": "#2e1d5e",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/1087/1087080.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
