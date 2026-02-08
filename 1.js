@@ -60,7 +60,10 @@ fab.addEventListener('click', () => {
     adminPanel.classList.toggle('active');
     fab.classList.toggle('rotate');
 });
-
+function updateDeleteButtonsVisibiliti(displayStyle) {
+    const deleteButtons = document.querySelectorAll('.btn-delete-hidden');
+    deleteButtons.forEach(btn => btn.style.display = displayStyle);
+}
 btnWorker.addEventListener('click', () => {
     btnWorker.classList.add('active');
     btnController.classList.remove('active');
@@ -68,7 +71,9 @@ btnWorker.addEventListener('click', () => {
     adminPanel.classList.remove('active');
     const deleteButtons = document.querySelectorAll(".btn-delete-hidden");
     deleteButtons.forEach((btn) => (btn.style.display = "none"));
+    updateDeleteButtonsVisibiliti('none');
 });
+
 
 btnController.addEventListener('click', () => {
     btnController.classList.add('active');
@@ -76,6 +81,7 @@ btnController.addEventListener('click', () => {
     fab.style.display = 'flex';
     const deleteButtons = document.querySelectorAll(".btn-delete-hidden");
     deleteButtons.forEach((btn) => (btn.style.display = "block"));
+    updateDeleteButtonsVisibiliti('block');
 });
 
 btnSave.addEventListener('click', () => {
