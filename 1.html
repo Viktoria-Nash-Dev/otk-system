@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Система контроля предъявления первой детали в ОТК">
+    <title>ОТК Контроль</title>
+    <link rel="stylesheet" href="1.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+</head>
+
+<body class="worker-mode">
+    <header>
+        <h1>Прием деталей</h1>
+        <section class="mode-switch">
+            <button id="btn-worker" class="active">Рабочие</button>
+            <button id="btn-controller">Контролеры</button>
+        </section>
+    </header>
+    <div class="table-header">
+        <span class="col-name">Деталь</span>
+        <span class="col-op">Оп.</span>
+        <span class="col-status">Статус</span>
+        <span class="col-date">Дата</span>
+        <span class="col-user">Контролер</span>
+    </div>
+    <ul id="detail-list">
+    </ul>
+    <button id="fab-add" class="fab">+</button>
+    <section class="input-area" id="admin-panel">
+        <div class="input-group">
+            <input type="text" id="part-name" placeholder="Название детали">
+            <input type="text" id="op-number" placeholder="№ операции">
+            <input type="text" id="controller-name" placeholder="Фамилия контролера">
+            <select id="status-select">
+                <option value="success">Годно</option>
+                <option value="defect">Брак</option>
+                <option value="paused">Пауза</option>
+            </select>
+            <textarea id="comment-text" placeholder="Комментарий (необязательно)" rows="2"></textarea>
+            <button id="btn-save">Сохранить</button>
+        </div>
+    </section>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
+
+    <script src="1.js"></script>
+</body>
+
+</html>

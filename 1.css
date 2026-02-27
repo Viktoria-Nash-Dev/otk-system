@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
 }
+
 body {
     background: linear-gradient(180deg, #2e1d5e, #4485e0);
     min-height: 100vh;
@@ -8,6 +9,7 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     padding-bottom: 100px;
 }
+
 header {
     display: flex;
     flex-direction: column;
@@ -17,10 +19,12 @@ header {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     color: rgb(210, 214, 244);
 }
+
 header h1 {
     margin: 0 0 15px 0;
     font-size: 24px;
 }
+
 .mode-switch {
     background: rgba(187, 180, 234, 0.195);
     padding: 5px;
@@ -28,6 +32,7 @@ header h1 {
     display: flex;
     gap: 5px;
 }
+
 .mode-switch button {
     background: transparent;
     color: #c0c3ec;
@@ -35,143 +40,17 @@ header h1 {
     padding: 8px 20px;
     border-radius: 20px;
     margin: 0;
+    cursor: pointer;
+    border: none;
 }
+
 .mode-switch button.active {
     background: rgb(228, 224, 239);
     color: #2e1d5e;
     font-weight: bold;
     box-shadow: 0 2px 5px rgba(43, 41, 106, 0.2);
 }
-.table-header {
-    display: flex;
-    justify-content: space-between;
-    padding: 15px 25px;
-    color: rgba(186, 181, 237, 0.7);
-    font-size: 11px;
-    text-transform: uppercase;
-    font-weight: bold;
-    letter-spacing: 1px;
-}
-.col-name,
-.col-op,
-.col-status,
-.col-date,
-.col-user {
-    flex: 1;
-    text-align: center;
-    color: white;
-}
-.col-name {
-    text-align: left;
-}
-.col-user {
-    text-align: right;
-}
-ul {
-    padding: 0;
-    margin: 0;
-    list-style-type: none;
-}
-li {
-    background: #a096d0d9;
-    margin: 10px 15px;
-    padding: 15px 20px;
-    border-radius: 16px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border: none;
-    color: #5e5e5f;
-    font-size: 14px;
-    transition: transform 0.2s;
-}
 
-li:hover {
-    transform: scale(1.02);
-}
-li span {
-    color: #333;
-}
-li .col-status {
-    font-weight: bold;
-    font-size: 12px;
-}
-#fab-add {
-    position: fixed;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background: #5736c5;
-    color: rgb(231, 231, 248);
-    font-size: 35px;
-    border: none;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
-    z-index: 1000;
-    cursor: pointer;
-    transition: 0.3s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-bottom: 5px;
-}
-#fab-add.rotate {
-    transform: translateX(-50%) rotate(45deg);
-    background: #755bca;
-}
-.input-area {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background: #a19ce1;
-    padding: 25px 20px 40px 20px;
-    border-radius: 25px 25px 0 0;
-    box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.2);
-    z-index: 999;
-    transform: translateY(110%);
-    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-.input-area.active {
-    transform: translateY(0);
-}
-.input-group {
-    display: flex;
-flex-direction: column;
-    gap: 15px;
-}
-input[type="text"],
-select {
-    width: 100%;
-    padding: 12px 15px;
-    font-size: 16px;
-    border: 2px solid #b9bbd7;
-    border-radius: 12px;
-    outline: none;
-    background: rgb(165, 168, 212);
-}
-input[type="text"]:focus,
-select:focus {
-    border-color: #4485e0;
-}
-#btn-save {
-    width: 100%;
-    padding: 15px;
-    font-size: 16px;
-    font-weight: bold;
-    background-color: #2e1d5e;
-    color: rgb(192, 193, 221);
-    border: none;
-    border-radius: 12px;
-    margin-top: 10px;
-    box-shadow: 0 4px 10px rgba(46, 29, 94, 0.3);
-}
-#btn-save:active {
-    transform: scale(0.98);
-}
 .table-header {
     display: grid;
     grid-template-columns: 2.5fr 0.8fr 0.8fr 1.2fr 1.8fr;
@@ -182,6 +61,30 @@ select:focus {
     color: rgba(255, 255, 255, 0.7);
     text-transform: uppercase;
 }
+
+.col-name,
+.col-op,
+.col-status,
+.col-date,
+.col-user {
+    text-align: center;
+    color: white;
+}
+
+.col-name {
+    text-align: left;
+}
+
+.col-user {
+    text-align: right;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
 li {
     background: rgb(173, 181, 211);
     margin: 8px 10px;
@@ -192,6 +95,7 @@ li {
     display: block;
     transition: all 0.3s ease;
 }
+
 .card-main {
     display: grid;
     grid-template-columns: 2.5fr 0.8fr 0.8fr 1.2fr 1.8fr;
@@ -200,6 +104,7 @@ li {
     align-items: center;
     cursor: pointer;
 }
+
 .card-main span {
     white-space: nowrap;
     overflow: hidden;
@@ -208,18 +113,22 @@ li {
     color: #333;
     text-align: center;
 }
+
 .col-part {
     text-align: left !important;
     font-weight: bold;
     color: #2e1d5e !important;
 }
+
 .col-op {
     font-size: 12px;
 }
+
 .col-user {
     text-align: right !important;
     font-size: 12px;
 }
+
 .status-badge {
     width: 20px;
     height: 20px;
@@ -227,18 +136,22 @@ li {
     margin: 0 auto;
     display: block;
 }
+
 .status-ok {
     background: #4CAF50;
     box-shadow: 0 0 5px #4CAF50;
 }
+
 .status-fail {
     background: #F44336;
     box-shadow: 0 0 5px #F44336;
 }
+
 .status-pause {
     background: #FFC107;
     box-shadow: 0 0 5px #FFC107;
 }
+
 .card-details {
     max-height: 0;
     overflow: hidden;
@@ -246,48 +159,16 @@ li {
     padding: 0 15px;
     font-size: 13px;
     color: #555;
-    border-top: 1px solid #c6d4f1;
     transition: max-height 0.3s ease, padding 0.3s ease;
 }
-li.expanded .card-details {
-    max-height: 100px;
-    padding: 10px 15px;
-}
+
 li.expanded {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     transform: scale(1.01);
 }
-textarea {
-    width: 100%;
-    padding: 12px 15px;
-    font-size: 16px;
-    border: 2px solid #ddd;
-    border-radius: 12px;
-    outline: none;
-    background: white;
-    font-family: inherit;
-    resize: none;
-}
-textarea:focus {
-    border-color: #4485e0;
-}
-.btn-delete-hidden {
-    display: block;
-    width: 100%;
-    margin-top: 15px;
-    padding: 8px;
-    background: rgba(244,67,54,0.1);
-    border: 1px solid rgba(43, 41, 106, 0.2);
-    color: #f17777;
-    border-radius: 8px;
-    font-size: 12px;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-.btn-delete-hidden:hover {
-    background: #2e1d5e;
-}
-li.expanded .card-details{
-    max-height: 150px;
+
+li.expanded .card-details {
+    max-height: 200px;
     padding: 15px;
+    border-top: 1px solid #c6d4f1
 }
