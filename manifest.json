@@ -1,13 +1,13 @@
 {
   "name": "ОТК Контроль",
   "short_name": "ОТК",
-  "start_url": "index.html",
+  "start_url": "1.html",
   "display": "standalone",
   "background_color": "#2e1d5e",
   "theme_color": "#2e1d5e",
   "icons": [
     {
-      "src": "2026-02-27 20.41.19.jpg",
+      "src": "https://yandex.ru/images/touch/search?pos=0&img_url=https%3A%2F%2Fcdn1.ozone.ru%2Fs3%2Fmultimedia-5%2F6777755861.jpg&text=%D0%BE%D1%82%D0%B4%D0%B5%D0%BB+%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%BE%D0%B3%D0%BE+%D0%BA%D0%BE%D0%BD%D1%82%D1%80%D0%BE%D0%BB%D1%8F&rpt=simage&lr=119712&source=tabbar",
       "sizes": "512x512",
       "type": "image/png"
     }
